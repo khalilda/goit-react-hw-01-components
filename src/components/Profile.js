@@ -4,7 +4,7 @@ export const Profile = user => {
   const { username, tag, location, avatar, stats } = user;
 
   return (
-    <div className={ProfileModule.profile.profi}>
+    <div className={ProfileModule.profile}>
       <div className={ProfileModule.description}>
         <img src={avatar} alt="User avatar" className={ProfileModule.avatar} />
         <p className={ProfileModule.name}>{username}</p>
