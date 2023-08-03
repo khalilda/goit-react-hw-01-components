@@ -1,10 +1,11 @@
+
 .profile {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
   
-    width: auto;
-    height: auto;
+    width: 50%;
+    /* height: auto; */
     margin-top: 50px;
     padding: 50px 12px;
   
@@ -12,7 +13,7 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   
-    background-color: #907d7d;
+    background-color: red;
   }
   
   .description {
@@ -25,7 +26,7 @@
   .avatar {
     width: 150px;
     border-radius: 50%;
-    border: 2px solid #acba33;
+    border: 2px solid blue;
   }
   
   .name {
@@ -61,7 +62,7 @@
     height: 60px;
     border-radius: 10px;
   
-    background: #acba33;
+    background: blue;
   }
   
   .label {
