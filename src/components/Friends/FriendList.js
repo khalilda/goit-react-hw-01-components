@@ -1,4 +1,4 @@
-import FriendListModule from '../components/FriendList.module.css';
+import FriendListModule from '../Friends/FriendList.module.css';
 
 export const FriendList = data => {
   const { friends } = data;

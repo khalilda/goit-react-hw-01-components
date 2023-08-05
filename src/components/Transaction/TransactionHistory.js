@@ -1,4 +1,4 @@
-import TransactionHistoryModule from '../components/TransactionHistory.module.css';
+import TransactionHistoryModule from '../Transaction/TransactionHistory.module.css';
 
 export const TransactionHistory = data => {
   const { items } = data;

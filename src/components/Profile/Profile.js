@@ -1,4 +1,4 @@
-import ProfileModule from '../components/Profile.module.css';
+import ProfileModule from '../Profile/Profile.module.css';
 
 export const Profile = user => {
   const { username, tag, location, avatar, stats } = user;
