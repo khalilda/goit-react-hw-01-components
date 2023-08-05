@@ -1,36 +1,35 @@
-import StatisticsModule from '../Statistics/Statistics.module.css';
+import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
+import changeItemColor from '../js/changeItemColor';
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+const Statistics = ({ title, stats }) => (
+  <section className={css.statistics}>
+    {title && <h2 className={css.title}>{title}</h2>}
 
+    <ul className={css.statList}>
+      {stats.map(stat => (
+        <li
+          style={{ backgroundColor: changeItemColor() }}
+          className={css.item}
+          key={stat.id}
+        >
+          <span className={css.label}>{stat.label}</span>
+          <span className={css.percentage}>{stat.percentage}%</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+);
 
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
 
-
-export const Statistics = data => {
-    const { title, stats } = data;
-  
-    return (
-      <>
-        <section className={StatisticsModule.statistics}>
-          {title && <h2 className={StatisticsModule.title}>{title}</h2>}
-  
-          <ul className={StatisticsModule.statList}>
-            {stats.map(stat => (
-              <li
-                key={stat.id}
-                style={{ backgroundColor: getRandomHexColor() }}
-                className={StatisticsModule.item}
-              >
-                <span className={StatisticsModule.label}>{stat.label}</span>
-                <span className={StatisticsModule.percentage}>
-                  {stat.percentage}%
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </>
-    );
-  };
-  
+export default Statistics;
