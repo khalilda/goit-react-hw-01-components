@@ -8,7 +8,7 @@ export const Profile = user => {
       <div className={ProfileModule.description}>
         <img src={avatar} alt="User avatar" className={ProfileModule.avatar} />
         <p className={ProfileModule.name}>{username}</p>
-        <p className={ProfileModule.string}>@{tag}</p>
+        <p className={ProfileModule.string}>{tag}</p>
         <p className={ProfileModule.string}>{location}</p>
       </div>
 
